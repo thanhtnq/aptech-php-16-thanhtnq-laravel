@@ -25,7 +25,7 @@ echo "<h1>2. FORM VALIDATION</h1>";
 echo "<br><br>DO EXERCISE INSIDE COMMENT CODE BELOW THIS LINE<hr>";
 ?>
 <?php
-/* $name = $email = $gender = "";
+$name = $email = $gender = "";
 $nameErr = $emailErr = $genderErr = "";
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
@@ -61,9 +61,9 @@ $data = trim($data);
 $data = stripslashes($data);
 $data = htmlspecialchars($data);
 return $data;
-} */
+}
 ?>
-<!-- <!DOCTYPE html>
+<!DOCTYPE html>
 <html>
 <head>
 </head>
@@ -92,12 +92,12 @@ Gender : <input type="radio" name="gender" value="female" <?php if ($gender === 
 <button type="submit">Submit</button>
 </form>
 </body>
-</html> -->
+</html>
 <?php
-/* if (!$nameErr && !$emailErr && !$genderErr) {
+if (!$nameErr && !$emailErr && !$genderErr) {
 echo "Your name is : $name<br>";
 echo "Your email is : $email<br>";
 echo "Your gender is : $gender";
 $name = $email = $gender = '';
-} */
+}
 ?>
