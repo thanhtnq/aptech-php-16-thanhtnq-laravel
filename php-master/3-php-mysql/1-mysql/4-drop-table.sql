@@ -6,3 +6,4 @@
 /*
 DROP TABLE aptech_php_12.users; 
 */
+DROP TABLE aptech-php-16-thanhtnq.users;

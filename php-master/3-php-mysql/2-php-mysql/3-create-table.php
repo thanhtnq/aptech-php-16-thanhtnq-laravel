@@ -39,3 +39,24 @@ $conn->close();
  */
 
 echo "<br><br>DO EXERCISE INSIDE COMMENT CODE BELOW THIS LINE<hr>";
+require './helper.php';
+$conn = connectDatabase();
+
+$sql = "CREATE TABLE thanhtnq_news.nnUser (
+uId int NOT NULL AUTO_INCREMENT PRIMARY KEY,
+uLastName varchar(255),
+uFirstName varchar(255),
+uEmail varchar(255) NOT NULL UNIQUE,
+uRole int NOT NULL DEFAULT 2,
+uState int NOT NULL DEFAULT 1,
+uCreatedDate datetime NOT NULL DEFAULT NOW(),
+uModifiedDate datetime
+)";
+
+if ($conn->query($sql) === true) {
+echo "Table nnUser created successfully";
+} else {
+echo "Error creating table : " . $conn->error;
+}
+
+$conn->close();

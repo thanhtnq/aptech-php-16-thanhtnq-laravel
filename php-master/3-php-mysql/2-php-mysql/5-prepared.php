@@ -34,3 +34,19 @@ $conn->close();
  */
 
 echo "<br><br>DO EXERCISE INSIDE COMMENT CODE BELOW THIS LINE<hr>";
+require './helper.php';
+$conn = connectDatabase();
+
+$stmt = $conn->prepare("INSERT INTO thanhtnq_news.nnUser (uLastName,uFirstName,uEmail,uRole) VALUES (?,?,?,?)");
+$stmt->bind_param("sssi", $uLastName, $uFirstName, $uEmail, $uRole);
+
+$uLastName = 'Ford';
+$uFirstName = 'Henry';
+$uEmail = "henry.ford@ford.com";
+$uRole = 2;
+$stmt->execute();
+
+echo "Using Prepared to insert new data successfully";
+
+$stmt->close();
+$conn->close();

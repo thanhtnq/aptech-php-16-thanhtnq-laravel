@@ -4,3 +4,5 @@
 /* UPDATE aptech_php.apUser 
 SET uState = -1 
 WHERE uId = 4; */
+
+UPDATE aptech-php-16-thanhtnq.users SET uState = -1 WHERE uID = 4;

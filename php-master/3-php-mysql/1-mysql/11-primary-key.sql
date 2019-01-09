@@ -7,7 +7,7 @@ ALTER TABLE aptech_php.apUser
 MODIFY COLUMN uId int NOT NULL AUTO_INCREMENT ; */
 -- EXERCISE 2 : Add more data in your table.
 -- SUGGESTION :
-/* INSERT INTO aptech_php.apUser
+INSERT INTO aptech-php-16-thanhtnq.users
     (uLastName, uFirstName,uEmail,uRole,uState,createdDate)
 VALUES
     ('Anna', 'Christopher', 'annateacher@yahoo.com', 2, 1, NOW()); */

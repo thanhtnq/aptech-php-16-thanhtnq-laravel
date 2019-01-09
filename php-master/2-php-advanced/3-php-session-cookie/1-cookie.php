@@ -26,3 +26,11 @@ echo "<h1>1. COOKIE</h1>";
  */
 
 echo "<br><br>DO EXERCISE INSIDE COMMENT CODE BELOW THIS LINE<hr>";
+setcookie('myName', 'Tran Nguyen Quang Thanh',time() + 15);
+if (isset($_COOKIE['myName'])) {
+echo "Value of cookie myName is : " . $_COOKIE['myName'] . "<br>";
+}
+setcookie('myProject', 'News Project',time() + 15);
+if (isset($_COOKIE['myProject'])) {
+echo "Value of cookie myProject is : " . $_COOKIE['myProject'];
+}

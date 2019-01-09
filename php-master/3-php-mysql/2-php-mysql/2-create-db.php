@@ -28,3 +28,13 @@ $conn->close();
  */
 
 echo "<br><br>DO EXERCISE INSIDE COMMENT CODE BELOW THIS LINE<hr>";
+require './helper.php';
+$conn = connectDatabase();
+
+$sql = "CREATE DATABASE thanhtnq_news";
+if ($conn->query($sql) === true) {
+echo "Database created successfully";
+} else {
+echo "Error creating database : " . $conn->error;
+}
+$conn->close();

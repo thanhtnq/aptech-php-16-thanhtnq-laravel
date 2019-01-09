@@ -20,7 +20,7 @@ echo "<h1>3. FILE UPLOAD</h1>";
 
 echo "<br><br>DO EXERCISE INSIDE COMMENT CODE BELOW THIS LINE<hr>";
 ?>
-<!-- <!DOCTYPE html>
+<!DOCTYPE html>
 <html>
 <head>
 </head>
@@ -31,16 +31,18 @@ Select image to upload : <input type="file" name="fileToUpload" id="fileToUpload
 <input type="submit" value="Submit" name="submit">
 </form>
 </body>
-</html> -->
+</html>
 <?php
-/* $targetDirectory = "uploads/";
+$targetDirectory = "uploads/";
 if (!file_exists($targetDirectory)) {
 mkdir($targetDirectory, 0777, true);
 }
+if (isset($_FILES["fileToUpload"])) {
 $targetFile = $targetDirectory . basename($_FILES["fileToUpload"]["name"]);
 $isUploadSuccess = true;
 $imageFileType = strtolower(pathinfo($targetFile, PATHINFO_EXTENSION));
-if ($_POST["submit"]) {
+}
+if ($_POST['submit']) {
 $check = getimagesize($_FILES["fileToUpload"]["tmp_name"]);
 if ($check !== false) {
 echo "File is an image - " . $check["mime"] . ".<br>";
@@ -74,5 +76,5 @@ echo "The file " . basename($_FILES["fileToUpload"]["name"]) . " has been upload
 } else {
 echo "There was an error uploading your file";
 }
-} */
+}
 ?>

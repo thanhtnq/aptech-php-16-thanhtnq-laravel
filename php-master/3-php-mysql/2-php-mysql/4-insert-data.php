@@ -35,3 +35,20 @@ $conn->close();
  */
 
 echo "<br><br>DO EXERCISE INSIDE COMMENT CODE BELOW THIS LINE<hr>";
+require './helper.php';
+$conn = connectDatabase();
+$sql = "INSERT INTO thanhtnq_news.nnUser (uLastName,uFirstName,uEmail,uRole)
+VALUES
+('Tran', 'Nguyen', 'a@gmail.com', 1),
+('Nguyen', 'Quang', 'b@gmail.com', 2),
+('Quang', 'Thanh', 'c@gmail.com', 1),
+('Thanh', 'Tran', 'd@gmail.com', 2),
+('Tran', 'Thanh', 'e@gmail.com', 3)";
+
+if ($conn->query($sql) === true) {
+echo "Table nnUser created successfully";
+} else {
+echo "Error creating table : " . $conn->error;
+}
+
+$conn->close();

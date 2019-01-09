@@ -13,3 +13,12 @@ CREATE TABLE aptech_php_12.users
     deleted_at datetime
 ) 
 */
+CREATE TABLE aptech-php-16-thanhtnq.users (
+    id INT PRIMARY KEY AUTO_INCREMENT,
+    last_name VARCHAR(255),
+    first_name VARCHAR(255),
+    email VARCHAR(255) unique,
+    created_at DATETIME,
+    modified_at DATETIME,
+    deleted_at DATETIME
+)
