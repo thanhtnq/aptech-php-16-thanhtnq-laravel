@@ -48,22 +48,22 @@ $authors = [
     [
         "name" => "Tran",
         "age" => "48",
-        "post_quantity" => "7",
+        "posts_quantity" => "7",
     ],
     [
         "name" => "Nguyen",
         "age" => "38",
-        "post_quantity" => "10",
+        "posts_quantity" => "10",
     ],
     [
         "name" => "Quang",
         "age" => "28",
-        "post_quantity" => "15",
+        "posts_quantity" => "15",
     ],
     [
         "name" => "Thanh",
         "age" => "18",
-        "post_quantity" => "14",
+        "posts_quantity" => "14",
     ],
 ];
 ?>
@@ -90,21 +90,20 @@ $authors = [
   <tbody>
   <?php
     foreach ($authors as $key => $value) {
-    ?>
-    <tr>
-        <td><?php echo $value['name'];?></td>
-        <td><?php echo $value['age'];?></td>
-        <td><?php echo $value['post_quantity']; ?></td>
-        <?php 
-            if ($value['post_quantity'] > 10) {
-                $salary = $value['post_quantity'] * 10000;
-            } else {
-                $salary = 0;
-            }
-        ?>
-        <td><?php echo $salary; ?></td>
-    </tr>
-<?php
+        $name = $value['name'];
+        $age = $value['age'];
+        $p_q = $value['posts_quantity'];
+        if ($p_q > 10) {
+            $salary = $p_q * 10;
+        } else {
+            $salary = 0;
+        }
+        echo "<tr>";
+        echo "<td>".$name."</td>";
+        echo "<td>".$age."</td>";
+        echo "<td>".$p_q."</td>";
+        echo "<td>".$salary."</td>";
+        echo "</tr>";
     }    
   ?>
   </tbody>
