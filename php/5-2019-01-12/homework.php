@@ -19,7 +19,6 @@ if (isset($_POST['submit'])) {
         }
     }
 }
-echo "<a href=\"./\">BACK</a>";
 ?>
 <h1>Login</h1>
 <form action="#" method="post">

@@ -4,7 +4,6 @@ $conn = connectDb();
 if (isset($_SESSION['user'])) {
     echo "<h2>Welcome ".$_SESSION['user']['fullname']."</h2>";
 }
-echo "<a href=\"./\">BACK</a>";
 ?>
 
 <h3>Users list</h3>
@@ -47,5 +46,6 @@ echo "<a href=\"./\">BACK</a>";
 </table>
 
 <?php
+echo "<a href=\"logout.php\">Logout</a>";
 mysqli_close($conn);
 ?>
